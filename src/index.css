@@ -8,89 +8,89 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Orygo Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 0 0% 11%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 0 0% 11%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --popover-foreground: 0 0% 11%;
+    
+    /* Primary - Bleu-teal principal */
+    --primary: 201 57% 33%;        /* #255f85 */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 200 48% 79%;  /* #b8d4e3 */
+    --primary-dark: 201 57% 24%;   /* #1a4560 */
+    
+    /* Secondary - Bleu-gris doux */
+    --secondary: 201 19% 52%;      /* #6b8a9f */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 200 38% 93%; /* #e8eef2 */
+    --secondary-dark: 201 20% 36%;  /* #4a6373 */
+    
+    /* Tertiary - Bleu ciel doux */
+    --tertiary: 199 31% 60%;       /* #7ba3bd */
+    --tertiary-light: 199 47% 90%; /* #d9e8f0 */
+    
+    --muted: 210 17% 96%;
+    --muted-foreground: 220 9% 56%;
+    
+    --accent: 199 31% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 201 57% 33%;
+    
+    --radius: 0.75rem;
+    
+    /* Success/Warning/Error */
+    --success: 142 71% 50%;        /* #34C759 */
+    --warning: 31 100% 50%;        /* #FF9500 */
+    --error: 4 100% 60%;           /* #FF3B30 */
+    
+    /* Accent Gold */
+    --gold: 51 100% 50%;           /* #FFD700 */
+    
+    /* Gradients */
+    --gradient-start: 201 57% 33%;
+    --gradient-middle: 201 57% 24%;
+    --gradient-end: 200 63% 15%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 201 57% 24%;
+    --foreground: 0 0% 98%;
+    
+    --card: 201 57% 20%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 201 57% 20%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 200 48% 79%;
+    --primary-foreground: 201 57% 24%;
+    
+    --secondary: 201 19% 52%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 201 20% 30%;
+    --muted-foreground: 200 10% 70%;
+    
+    --accent: 199 31% 60%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 201 20% 30%;
+    --input: 201 20% 30%;
+    --ring: 200 48% 79%;
   }
 }
 
