@@ -31,7 +31,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-primary transition-colors">À propos</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Carrières</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/contact" className="hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
           
@@ -39,10 +39,10 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-foreground mb-4">Légal</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Confidentialité</a></li>
+              <li><a href="/privacy" className="hover:text-primary transition-colors">Confidentialité</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">CGU</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Cookies</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Mentions légales</a></li>
+              <li><a href="/cookies" className="hover:text-primary transition-colors">Cookies</a></li>
+              <li><a href="/legal" className="hover:text-primary transition-colors">Mentions légales</a></li>
             </ul>
           </div>
         </div>
