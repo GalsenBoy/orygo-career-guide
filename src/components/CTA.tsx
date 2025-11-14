@@ -23,7 +23,7 @@ const CTA = () => {
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 mb-8">
-            <span className="text-sm font-medium">100% Gratuit • Sans engagement</span>
+            <span className="text-sm font-medium">Essayer gratuitement • Sans engagement</span>
           </div>
           
           {/* Heading */}
