@@ -24,6 +24,7 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
     { name: "Accueil", href: "/" },
     { name: "Fonctionnalités", href: "/#features" },
     { name: "Comment ça marche", href: "/#how-it-works" },
+    { name: "À propos", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
 
