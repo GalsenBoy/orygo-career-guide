@@ -21,9 +21,9 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
   }, []);
 
   const navLinks = [
-    { name: "Accueil", href: "/" },
     { name: "Fonctionnalités", href: "/#features" },
     { name: "Comment ça marche", href: "/#how-it-works" },
+    { name: "Carrière", href: "/career" },
     { name: "À propos", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -43,7 +43,11 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2">
-            <img src="/orygo.png" alt="Orygo Logo" className="h-16 w-auto" />
+            <img
+              src={isTransparent ? "/orygo.png" : "/logoblack.png"}
+              alt="Orygo Logo"
+              className="h-16 w-auto transition-opacity duration-300"
+            />
           </a>
 
           {/* Desktop Navigation */}
