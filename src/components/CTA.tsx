@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import AppDownloadModal from "./AppDownloadModal";
 
 const benefits = [
   "Test RIASEC complet et gratuit",
@@ -9,6 +11,8 @@ const benefits = [
 ];
 
 const CTA = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="py-24 bg-gradient-to-br from-primary via-primary-dark to-[hsl(var(--gradient-end))] relative overflow-hidden">
       {/* Background Pattern */}
@@ -46,20 +50,23 @@ const CTA = () => {
           </div>
           
           {/* CTA Button */}
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
+            onClick={() => setIsModalOpen(true)}
             className="bg-white text-primary hover:bg-primary-light hover:text-primary-dark font-bold text-xl px-12 py-8 rounded-xl shadow-2xl transition-all duration-300 hover:scale-105"
           >
             Commencer gratuitement
             <ArrowRight className="ml-2 w-6 h-6" />
           </Button>
-          
+
           <p className="text-sm text-primary-light mt-6">
             Aucune carte bancaire requise • Démarrez en 2 minutes
           </p>
         </div>
       </div>
-      
+
+      <AppDownloadModal open={isModalOpen} onOpenChange={setIsModalOpen} />
+
       {/* Decorative Elements */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-white/5 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl" />

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import AppDownloadModal from "./AppDownloadModal";
 
 interface NavbarProps {
   transparent?: boolean;
@@ -10,6 +11,7 @@ interface NavbarProps {
 const Navbar = ({ transparent = false }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,6 +70,7 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
             ))}
 
             <Button
+              onClick={() => setIsModalOpen(true)}
               className={cn(
                 "font-semibold transition-all",
                 isTransparent
@@ -119,12 +122,20 @@ const Navbar = ({ transparent = false }: NavbarProps) => {
               </a>
             ))}
 
-            <Button className="w-full bg-primary text-white hover:bg-primary-dark font-semibold">
+            <Button
+              onClick={() => {
+                setIsModalOpen(true);
+                setIsMobileMenuOpen(false);
+              }}
+              className="w-full bg-primary text-white hover:bg-primary-dark font-semibold"
+            >
               Commencer
             </Button>
           </div>
         </div>
       )}
+
+      <AppDownloadModal open={isModalOpen} onOpenChange={setIsModalOpen} />
     </nav>
   );
 };
