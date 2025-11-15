@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import AppDownloadModal from "./AppDownloadModal";
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary-dark to-[hsl(var(--gradient-end))]">
       {/* Background Pattern */}
@@ -32,14 +36,15 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
+                onClick={() => setIsModalOpen(true)}
                 className="bg-white text-primary hover:bg-primary-light hover:text-primary-dark font-semibold text-lg px-8 py-6 rounded-xl shadow-xl transition-all duration-300 hover:scale-105"
               >
                 Commencer maintenant
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              
+
               <Button
                 asChild
                 size="lg"
@@ -51,6 +56,8 @@ const Hero = () => {
                 </a>
               </Button>
             </div>
+
+            <AppDownloadModal open={isModalOpen} onOpenChange={setIsModalOpen} />
             
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8">
